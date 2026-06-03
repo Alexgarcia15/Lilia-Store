@@ -1,0 +1,480 @@
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+    overflow-x:hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    background:#0f172a;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-img{
+    height:40px;
+    width:auto;
+    display:block;
+}
+
+.logo-text{
+    color:#fbbf24;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#fbbf24;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:1.8rem;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+    background:
+    linear-gradient(
+    rgba(15,23,42,.85),
+    rgba(15,23,42,.85)
+    ),
+    url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1400');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    color:white;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:white;
+    font-size:1.2rem;
+    max-width:600px;
+    margin-bottom:30px;
+}
+
+.btn-principal{
+    background:#fbbf24;
+    color:#0f172a;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-principal:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   BUSCADOR
+========================= */
+
+.buscador{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.buscador input{
+    width:100%;
+    max-width:600px;
+    padding:15px;
+    border-radius:10px;
+    border:2px solid #cbd5e1;
+    font-size:1rem;
+}
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categoria{
+    padding:60px 20px;
+}
+
+.categoria h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#0f172a;
+    font-size:2rem;
+}
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+.productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.producto{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.producto:hover{
+    transform:translateY(-8px);
+}
+
+.producto img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.producto h3{
+    padding:15px 15px 5px;
+    color:#0f172a;
+}
+
+.producto p{
+    padding:0 15px 15px;
+    color:#64748b;
+    font-weight:600;
+}
+
+.btn-whatsapp{
+    display:block;
+    margin:15px;
+    text-align:center;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-whatsapp:hover{
+    background:#1fb958;
+}
+
+.btn-destacado{
+    display:block;
+    margin:0 20px 20px;
+    padding:14px;
+    text-align:center;
+    text-decoration:none;
+    background:#25D366;
+    color:white;
+    font-weight:bold;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.btn-destacado:hover{
+    transform:scale(1.05);
+    background:#1fb958;
+}
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.beneficios{
+    background:white;
+    padding:70px 20px;
+}
+
+.beneficios h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.beneficios-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.beneficios-grid div{
+    background:#f8fafc;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h3{
+    color:#fbbf24;
+    margin-bottom:15px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
+
+.whatsapp-float{
+    position:fixed;
+    width:65px;
+    height:65px;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    z-index:9999;
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#0f172a;
+        flex-direction:column;
+        align-items:center;
+        max-height:0;
+        overflow:hidden;
+        transition:.3s;
+    }
+
+    .nav-links.active{
+        max-height:400px;
+        padding:20px 0;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .producto img{
+        height:240px;
+    }
+}
+
+.producto{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.producto.mostrar{
+    opacity:1;
+    transform:translateY(0);
+    transition:all .6s ease;
+}
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.slider{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(15,23,42,.65);
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.hero-content h1{
+    color:white;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    color:white;
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+
+/* =========================
+   PRODUCTOS DESTACADOS
+========================= */
+
+.destacados{
+    padding:80px 20px;
+    background:#ffffff;
+}
+
+.destacados h2{
+    text-align:center;
+    font-size:2.2rem;
+    color:#0f172a;
+    margin-bottom:40px;
+}
+
+.destacados-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.destacado-card{
+    background:white;
+    border:3px solid #fbbf24;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    transition:0.4s;
+}
+
+.destacado-card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.destacado-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.destacado-card h3{
+    text-align:center;
+    padding:20px;
+    color:#0f172a;
+    font-size:1.2rem;
+}
+
