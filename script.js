@@ -41,9 +41,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  {
-    //threshold: 0.15
-  },
+  
 );
 
 document.querySelectorAll(".producto").forEach((card) => {
