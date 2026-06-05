@@ -1,13 +1,8 @@
-
-// ==========================
-// MENÚ RESPONSIVE
-// ==========================
-
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
 menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+  navLinks.classList.toggle("active");
 });
 
 // ==========================
@@ -17,48 +12,42 @@ menuToggle.addEventListener("click", () => {
 const searchInput = document.getElementById("searchInput");
 
 searchInput.addEventListener("keyup", () => {
+  const filtro = searchInput.value.toLowerCase();
 
-    const filtro = searchInput.value.toLowerCase();
+  const productos = document.querySelectorAll(".producto");
 
-    const productos = document.querySelectorAll(".producto");
+  productos.forEach((producto) => {
+    const nombreProducto = producto
+      .querySelector("h3")
+      .textContent.toLowerCase();
 
-    productos.forEach(producto => {
-
-        const nombreProducto = producto
-            .querySelector("h3")
-            .textContent
-            .toLowerCase();
-
-        if (nombreProducto.includes(filtro)) {
-            producto.style.display = "block";
-        } else {
-            producto.style.display = "none";
-        }
-
-    });
-
+    if (nombreProducto.includes(filtro)) {
+      producto.style.display = "block";
+    } else {
+      producto.style.display = "none";
+    }
+  });
 });
 
 // ==========================
 // ANIMACIÓN AL HACER SCROLL
 // ==========================
 
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("mostrar");
-        }
-
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("mostrar");
+      }
     });
-
-}, {
+  },
+  {
     //threshold: 0.15
-});
+  },
+);
 
 document.querySelectorAll(".producto").forEach((card) => {
-    observer.observe(card);
+  observer.observe(card);
 });
 
 // ==========================
@@ -75,17 +64,16 @@ const slides = document.querySelectorAll(".slide");
 
 let currentSlide = 0;
 
-function cambiarSlide(){
+function cambiarSlide() {
+  slides[currentSlide].classList.remove("active");
 
-    slides[currentSlide].classList.remove("active");
+  currentSlide++;
 
-    currentSlide++;
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
 
-    if(currentSlide >= slides.length){
-        currentSlide = 0;
-    }
-
-    slides[currentSlide].classList.add("active");
+  slides[currentSlide].classList.add("active");
 }
 
 setInterval(cambiarSlide, 3000);
