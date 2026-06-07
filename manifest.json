@@ -1,0 +1,15 @@
+{
+  "name": "Lilia Store",
+  "short_name": "Lilia",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f8dce6",
+  "theme_color": "#e89ab8",
+  "icons": [
+    {
+      "src": "imagenes/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

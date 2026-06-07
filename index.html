@@ -6,7 +6,8 @@
     <title>Lilia Fashion & Home</title>
 
     <link rel="stylesheet" href="style.css" />
-
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#e89ab8" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -126,7 +127,7 @@
           </div>
 
           <div class="destacado-card">
-            <img src="imagenes/tenisAzulYverde (3).jpg" alt="tenisAzulYverde.jpg" />
+            <img src="imagenes/tenisAzulYverde.jpg" alt="tenisAzulYverde.jpg" />
 
             <h3>🌸 Tenis Azul y Verde</h3>
 
@@ -335,5 +336,13 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("./service-worker.js")
+    .then(() => console.log("Service Worker registrado"));
+}
+</script>
   </body>
 </html>
